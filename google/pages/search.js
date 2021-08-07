@@ -2,6 +2,7 @@ import Head from 'next/head'
 import SearchHeader from '../components/SearchHeader'
 import Response from '../Response'
 import { useRouter } from 'next/router'
+import SearchResults from '../components/SearchResults'
 
 function Search({ results }) {
 
@@ -19,7 +20,7 @@ function Search({ results }) {
             <SearchHeader />
 
             {/* Search Results */}
-            <h1>Search Results</h1>
+            <SearchResults results={results} />
         </div>
     )
 
