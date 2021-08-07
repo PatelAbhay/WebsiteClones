@@ -1,10 +1,14 @@
+import Image from 'next/image'
+
 function Profile({ url, className }) {
     return (
-        <img
+        <Image
             loading='lazy'
             src={url}
-            alt='profile-pic'
-            className={`h-8 rounded-full cursor-pointer transition duration-150 transform hover:scale-110 ${className}`} />
+            width={40}
+            height={40}
+            className={`h-8 rounded-full cursor-pointer transition duration-150 transform hover:scale-110 ${className}`}
+            alt="Absolute Chad" />
     )
 }
 

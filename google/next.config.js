@@ -1,7 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['www.google.ca'],
+    domains: ['www.google.ca', 'i.pinimg.com'],
   },
   env: {
     API_KEY: 'AIzaSyC32sNHfTdRmm8NRUjRmeR8souxnJdkcrA',
