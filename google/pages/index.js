@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Profile from '../components/Profile'
+import { ViewGridIcon } from '@heroicons/react/outline'
 
 {/* maybe make all the useless-links in header link to "Never Gonna Give You Up" */ }
 
@@ -26,6 +27,8 @@ export default function Home() {
           <p className="useless-links">Images</p>
 
           {/* 9 dot icon */}
+          <ViewGridIcon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100 cursor-pointer" />
+
           {/* Profile Picture */}
           <Profile url='https://i.pinimg.com/564x/c8/ba/85/c8ba858ac51835cc0bfcd0fe871efb04.jpg' />
         </div>
