@@ -4,7 +4,7 @@ module.exports = {
     domains: ['www.google.ca'],
   },
   env: {
-    API_KEY: 'AIzaSyC32sNHfTdRmm8NRUjRmeR8souxnJdkcrA',
-    CONTEXT_KEY: '8473c008cf3594516'
+    API_KEY: 'YOUR API KEY',
+    CONTEXT_KEY: 'YOUR CONTEXT KEY'
   }
 }
