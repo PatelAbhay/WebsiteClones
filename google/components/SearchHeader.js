@@ -17,7 +17,7 @@ function SearchHeader() {
 
         if (!term) return;
 
-        router.push(`/search?term=${term}`);
+        router.push(`/search?term=${term}&start=0`);
     }
 
     return (

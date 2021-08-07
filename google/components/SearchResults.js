@@ -1,3 +1,5 @@
+import Pagination from "./Pagination";
+
 function SearchResults({ results }) {
     return (
         <div className="mx-auto w-full px-3 sm:pl-[5%] md:pl-[14%] lg:pl-44">
@@ -21,6 +23,7 @@ function SearchResults({ results }) {
                 </div>
             ))}
 
+            <Pagination />
         </div>
     )
 }
