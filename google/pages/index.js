@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
 
       {/* Header */}
-      <header className="flex w-full justify-between p-6 text-sm">
+      <header className="flex w-full justify-between p-5 text-sm">
         {/* Left section */}
         <div className="flex space-x-5 items-center">
           <p className="useless-links">About</p>
@@ -47,6 +47,12 @@ export default function Home() {
           <input type='text' className='focus:outline-none flex-grow' />
           <MicrophoneIcon className='h-6 w-5 text-gray-500' />
         </div>
+
+        <div className='flex flex-col w-1/2 space-y-2 justify-center mt-8 sm:space-y-0 sm:flex-row sm:space-x-4'>
+          <button className='btn'>Google Search</button>
+          <button className='btn'>I'm Feeling Lucky</button>
+        </div>
+
       </form>
 
       {/* Footer */}

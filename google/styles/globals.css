@@ -6,4 +6,10 @@
     .useless-links {
         @apply hover:underline cursor-pointer;  
     }
+
+    .btn {
+        /* could also use bg-[#HEXCODE] for a custom color */
+        @apply bg-gray-50 px-5 py-2 rounded-sm ring-gray-200 text-sm text-gray-800 
+                 hover:ring-1 focus:outline-none active:ring-gray-300 hover:shadow-md;
+    }
 }
