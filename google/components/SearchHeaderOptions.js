@@ -21,10 +21,7 @@ function SearchHeaderOptions() {
                     title="More" />
             </div>
 
-            <div className="flex space-x-4">
-                <p className="useless-links">Settings</p>
-                <p className="useless-links">Tools</p>
-            </div>
+            <p className="useless-links">Tools</p>
         </div>
     )
 }
