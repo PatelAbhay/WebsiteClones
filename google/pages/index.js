@@ -1,6 +1,7 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Profile from '../components/Profile'
-import { ViewGridIcon } from '@heroicons/react/outline'
+import { MicrophoneIcon, ViewGridIcon, SearchIcon } from '@heroicons/react/outline'
 
 {/* maybe make all the useless-links in header link to "Never Gonna Give You Up" */ }
 
@@ -26,7 +27,7 @@ export default function Home() {
           <p className="useless-links">Gmail</p>
           <p className="useless-links">Images</p>
 
-          {/* 9 dot icon */}
+          {/* Menu icon */}
           <ViewGridIcon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100 cursor-pointer" />
 
           {/* Profile Picture */}
@@ -35,7 +36,18 @@ export default function Home() {
       </header>
 
       {/* Body */}
-      <h1>Body</h1>
+      <form className='flex flex-col items-center mt-40 flex-grow'>
+        <Image
+          src='https://www.google.ca/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'
+          width={272} height={92} />
+
+        <div className='flex w-full mt-5 hover:shadow-lg focus-within:shadow-lg max-w-md rounded-full 
+        border border-gray-200 px-5 py-3 items-center sm:max-w-xl lg:max-w-2xl'>
+          <SearchIcon className='h-5 w-5 mr-3 text-gray-500' />
+          <input type='text' className='focus:outline-none flex-grow' />
+          <MicrophoneIcon className='h-6 w-5 text-gray-500' />
+        </div>
+      </form>
 
       {/* Footer */}
       <h1>Footer</h1>
