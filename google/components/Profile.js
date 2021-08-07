@@ -4,7 +4,7 @@ function Profile({ url }) {
             loading='lazy'
             src={url}
             alt='profile-pic'
-            className='h-10 rounded-full cursor-pointer transition duration-150 transform hover:scale-110' />
+            className='h-8 rounded-full cursor-pointer transition duration-150 transform hover:scale-110' />
     )
 }
 
