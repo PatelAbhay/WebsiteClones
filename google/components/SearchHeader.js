@@ -27,7 +27,8 @@ function SearchHeader() {
                     src="https://www.google.ca/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
                     width={92} height={30}
                     className="cursor-pointer"
-                    onClick={() => router.push("/")} />
+                    onClick={() => router.push("/")}
+                    alt="Absolute Chad" />
 
                 <form className="flex flex-grow border border-gray-200 rounded-full shadow-md hover:shadow-lg focus-within:shadow-lg
                  max-w-3xl items-center px-6 py-2 ml-10 mr-5">

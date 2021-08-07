@@ -56,7 +56,8 @@ export default function Home() {
       <form className='flex flex-col items-center mt-20 flex-grow w-4/5'>
         <Image
           src='https://www.google.ca/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'
-          width={272} height={92} />
+          width={272} height={92}
+          alt="Absolute Chad" />
 
         <div className='flex w-full mt-5 hover:shadow-lg focus-within:shadow-lg max-w-md rounded-full 
         border border-gray-200 px-5 py-3 items-center sm:max-w-xl lg:max-w-2xl'>
