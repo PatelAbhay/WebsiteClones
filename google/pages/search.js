@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import SearchHeader from '../components/SearchHeader'
 
 function Search() {
     return (
@@ -10,7 +11,7 @@ function Search() {
             </Head>
 
             {/* Header */}
-            <h1>Header</h1>
+            <SearchHeader />
 
             {/* Search Results */}
             <h1>Search Results</h1>

@@ -10,7 +10,7 @@ import { useRouter } from 'next/router'
 
 export default function Home() {
 
-  const router = new useRouter();
+  const router = useRouter();
   const searchReference = useRef(null);
 
   const search = event => {
