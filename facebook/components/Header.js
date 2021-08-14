@@ -1,7 +1,24 @@
+import Image from 'next/image'
+
 function Header() {
     return (
         <header>
-            <h1>Header</h1>
+            {/* Search */}
+            <div>
+                <Image src="/facebook-logo.svg"
+                    width={40} height={40}
+                />
+            </div>
+
+            {/* Pages Icons */}
+            <div>
+
+            </div>
+
+            {/* Profile Icons */}
+            <div>
+
+            </div>
         </header>
     )
 }
