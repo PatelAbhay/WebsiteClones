@@ -11,6 +11,8 @@ import PeopleAltIcon from '@material-ui/icons/PeopleAlt'
 import AppsIcon from '@material-ui/icons/Apps'
 import FileCopyIcon from '@material-ui/icons/FileCopy'
 import ExpandLessIcon from '@material-ui/icons/ExpandLess'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import AddIcon from '@material-ui/icons/Add'
 
 const SideBarContainer = styled.div`
     background-color: var(--slack-color);
@@ -19,6 +21,12 @@ const SideBarContainer = styled.div`
     border-top: 1px solid #49274b;
     max-width: 260px;
     margin-top: 60px;
+
+    > hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #49274b;
+    }
 `;
 
 const SideBarHeader = styled.div`
@@ -81,6 +89,10 @@ function SideBar() {
             <SideBarRow Icon={AppsIcon} title="Apps" />
             <SideBarRow Icon={FileCopyIcon} title="File Browser" />
             <SideBarRow Icon={ExpandLessIcon} title="Show Less" />
+            <hr />
+            <SideBarRow Icon={ExpandMoreIcon} title="Channels" />
+            <hr />
+            <SideBarRow Icon={AddIcon} addChannelOption title="Add Channel" />
         </SideBarContainer>
     )
 }
