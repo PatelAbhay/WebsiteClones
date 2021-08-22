@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { db } from '../firebase'
 
 const SideBarRowContainer = styled.div`
     display:flex;
@@ -28,7 +29,16 @@ const OptionChannel = styled.div`
 
 function SideBarRow({ Icon, title, addChannelOption }) {
 
-    const addChannel = () => { };
+    const addChannel = () => {
+        const cName = prompt('Enter the name of the channel')
+
+        if (cName) {
+            db.collection('rooms').add({
+                name: cName
+            })
+        }
+
+    };
     const selectChannel = () => { };
 
     return (
