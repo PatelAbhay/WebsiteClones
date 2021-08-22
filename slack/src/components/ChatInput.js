@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { db } from '../firebase'
 import firebase from 'firebase'
+import { auth } from '../firebase'
+import { useAuthState } from 'react-firebase-hooks/auth'
 
 const InputContainer = styled.div`
     border-radius: 20px;
@@ -29,6 +31,8 @@ const InputContainer = styled.div`
 
 function ChatInput({ chatRef, channelName, channelId }) {
 
+    const [user] = useAuthState(auth)
+
     const [input, setInput] = useState('');
 
     const sendMessage = e => {
@@ -41,8 +45,8 @@ function ChatInput({ chatRef, channelName, channelId }) {
         db.collection('rooms').doc(channelId).collection('messages').add({
             message: input,
             time: firebase.firestore.FieldValue.serverTimestamp(),
-            user: 'Abhay',
-            userImage: 'https://i.kym-cdn.com/entries/icons/original/000/027/100/_103330503_musk3.jpg'
+            user: user.displayName,
+            userImage: user.photoURL,
         });
 
         chatRef?.current?.scrollIntoView({
