@@ -27,7 +27,7 @@ const InputContainer = styled.div`
     }
 `;
 
-function ChatInput({ channelName, channelId }) {
+function ChatInput({ chatRef, channelName, channelId }) {
 
     const [input, setInput] = useState('');
 
@@ -43,6 +43,10 @@ function ChatInput({ channelName, channelId }) {
             time: firebase.firestore.FieldValue.serverTimestamp(),
             user: 'Abhay',
             userImage: 'https://i.kym-cdn.com/entries/icons/original/000/027/100/_103330503_musk3.jpg'
+        });
+
+        chatRef?.current?.scrollIntoView({
+            behavior: 'smooth'
         });
 
         setInput('');
