@@ -1,5 +1,7 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
 import styled from 'styled-components'
+import enterRoom from '../features/counterSlice'
 import { db } from '../firebase'
 
 const SideBarRowContainer = styled.div`
@@ -30,6 +32,8 @@ const OptionChannel = styled.h3`
 
 function SideBarRow({ Icon, title, addChannelOption, id }) {
 
+    const dispatch = useDispatch();
+
     const addChannel = () => {
         const cName = prompt('Enter the name of the channel')
 
@@ -40,7 +44,13 @@ function SideBarRow({ Icon, title, addChannelOption, id }) {
         }
 
     };
-    const selectChannel = () => { };
+    const selectChannel = () => {
+        if (id) {
+            dispatch(enterRoom({
+                roomId: id,
+            }));
+        }
+    };
 
     return (
         <SideBarRowContainer onClick={addChannelOption ? addChannel : selectChannel}>
