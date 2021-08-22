@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Header from "./components/Header"
 import SideBar from "./components/SideBar"
+import Chat from './components/Chat';
 
 
 const Body = styled.div`
@@ -30,6 +31,7 @@ function App() {
             <Switch>
               <Route path="/">
                 {/* Actual Chat */}
+                <Chat />
               </Route>
             </Switch>
           </Body>
