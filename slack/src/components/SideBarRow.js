@@ -23,11 +23,12 @@ const SideBarRowContainer = styled.div`
     }
 `;
 
-const OptionChannel = styled.div`
-
+const OptionChannel = styled.h3`
+    padding: 10px 0px;
+    font-weight: 300;
 `;
 
-function SideBarRow({ Icon, title, addChannelOption }) {
+function SideBarRow({ Icon, title, addChannelOption, id }) {
 
     const addChannel = () => {
         const cName = prompt('Enter the name of the channel')
