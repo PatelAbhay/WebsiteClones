@@ -42,6 +42,7 @@ const SideBarHeader = styled.div`
         font-size: 18px;
         background-color: white;
         border-radius: 9999px;
+        cursor:pointer;
     }
 `;
 
@@ -71,7 +72,7 @@ const Info = styled.div`
 
 function SideBar() {
 
-    const [channels, loading, error] = useCollection(db.collection('rooms'));
+    const [channels] = useCollection(db.collection('rooms'));
 
     return (
         <SideBarContainer>

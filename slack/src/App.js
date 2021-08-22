@@ -8,8 +8,10 @@ import {
 } from "react-router-dom";
 import Header from "./components/Header"
 import SideBar from "./components/SideBar"
-import Chat from './components/Chat';
-
+import Chat from './components/Chat'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from './firebase'
+import Login from './components/Login';
 
 const Body = styled.div`
   display:flex;
@@ -18,24 +20,30 @@ const Body = styled.div`
 `;
 
 function App() {
+
+  const [user, loading] = useAuthState(auth)
+
   return (
     <div className="app">
       <Router>
-        <>
-          {/* Header */}
-          <Header />
-          <Body>
-            <SideBar />
-            {/* A <Switch> looks through its children <Route>s and
+        {!user ? (
+          <Login />
+        ) : (
+          <>
+            {/* Header */}
+            <Header />
+            <Body>
+              <SideBar />
+              {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-            <Switch>
-              <Route path="/">
-                {/* Actual Chat */}
-                <Chat />
-              </Route>
-            </Switch>
-          </Body>
-        </>
+              <Switch>
+                <Route path="/">
+                  {/* Actual Chat */}
+                  <Chat />
+                </Route>
+              </Switch>
+            </Body>
+          </>)}
       </Router>
     </div>
   );

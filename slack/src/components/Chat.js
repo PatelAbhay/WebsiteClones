@@ -35,6 +35,7 @@ const Left = styled.div`
     .MuiSvgIcon-root{
         margin-left: 10px;
         font-size: 18px;
+        cursor:pointer;
     }
 `;
 
@@ -43,6 +44,7 @@ const Right = styled.div`
         display: flex;
         align-items: center;
         font-size: 14px;
+        cursor:pointer;
     }
 
     > p > .MuiSvgIcon-root {
