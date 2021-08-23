@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { SearchIcon } from '@heroicons/react/solid'
+import { SearchIcon, GlobeAltIcon, MenuIcon, UserCircleIcon, UsersIcon } from '@heroicons/react/solid'
 
 function Header() {
     return (
@@ -14,14 +14,16 @@ function Header() {
 
             {/* Search */}
             <div className="flex bg-gray-100 md:bg-white items-center md:border-2 rounded-full py-2 md:shadow-sm">
-                <input className="flex-grow pl-5 bg-transparent outline-none" type="text" placeholder="Start your search" />
-                <SearchIcon className="hidden md:inline-flex h-9 bg-red-400 text-white rounded-full p-2 cursor-pointer
+                <input className="flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400"
+                    type="text" placeholder="Start your search" />
+                <SearchIcon className="hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer
                 md:mx-2" />
             </div>
 
             {/* Options */}
-            <div>
-
+            <div className="flex space-x-4">
+                <p>Become a Host</p>
+                <GlobeAltIcon className="h-6" />
             </div>
         </header>
     )
