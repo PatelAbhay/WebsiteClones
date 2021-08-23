@@ -6,7 +6,7 @@ export default function Home() {
     <div className="">
       <Head>
         <title>Airbnb</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/airbnb_logo.svg" />
       </Head>
 
       {/* Header */}
