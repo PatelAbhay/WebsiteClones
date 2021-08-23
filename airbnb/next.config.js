@@ -1,5 +1,6 @@
 module.exports = {
     images: {
-        domains: ['upload.wikimedia.org'],
+        //for some reason the wikipedia link doesn't render the image...........why tho
+        domains: ['upload.wikimedia.org', 'a0.muscache.com'],
     },
 };
