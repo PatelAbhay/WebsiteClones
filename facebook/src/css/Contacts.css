@@ -1,0 +1,57 @@
+.contact-container {
+    flex: 0.33;
+    margin-top: 25px;
+}
+
+.contact-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-icons {
+    display: flex;
+    align-items: center;
+}
+
+.contact-icons > .MuiSvgIcon-root {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.contact-top > * {
+    color: gray;
+}
+
+.contact-top > h2 {
+    font-size: large;
+    font-weight: 500;
+    margin-bottom: 5px;
+} 
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.contact-row > img {
+    height: 45px;
+    border-radius: 9999px;
+    margin-right: 10px;
+}
+
+.contact-row > p {
+    font-size: medium;
+}
+
+.green-dot {
+    height: 11px;
+    width: 11px;
+    background-color: limegreen;
+    border-radius: 9999px;
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+}
